@@ -19,6 +19,23 @@ let currentInventory = [
 
 function renderInventory(shoeList) {
     // your code here
+
+    let result = [];
+  
+  // Iterar sobre cada diseñador en el inventario
+  for (let designer of currentInventory) {
+    // Iterar sobre cada zapato del diseñador
+    for (let shoe of designer.shoes) {
+      // Verificar si el nombre del zapato contiene "black"
+      if (shoe.name.includes('black')) {
+        // Añadir el zapato a la matriz de resultados
+        result.push([designer.name, shoe.name, shoe.price]);
+      }
+    }
+  }
+  
+  // Retornar la matriz de resultados
+  return result;
     
 }
 

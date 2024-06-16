@@ -1,5 +1,13 @@
 function removeFromBack(arr) {
     // your code here
+
+    if(!Array.isArray(arr)){
+        return []
+    }
+
+    arr.pop()
+
+    return arr
     
 }
 

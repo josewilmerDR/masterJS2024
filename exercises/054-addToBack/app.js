@@ -1,5 +1,15 @@
 function addToBack(arr, element) {
   // your code here
+
+  if(!Array.isArray(arr)){
+      return []
+    }
+
+    arr.push(element)
+
+    return arr
+
+  
   
 }
 

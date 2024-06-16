@@ -19,6 +19,29 @@ let currentInventory = [
 
 function getLaceNameDataForShoes(inventory) {
     // your code here
+    let result = [];
+  
+  // Iterar sobre cada diseñador en el inventario
+  for (let designer of currentInventory) {
+    // Iterar sobre cada zapato del diseñador
+    for (let shoe of designer.shoes) {
+      // Verificar si el nombre del zapato contiene "lace" o "laced"
+      if (shoe.name.includes('lace')) {
+        // Dividir el nombre del zapato en palabras
+        let words = shoe.name.split(' ');
+        // Encontrar el índice de la palabra que contiene "lace"
+        let targetIndex = words.findIndex(word => word.includes('lace'));
+        // Añadir el resultado al array de resultados
+        result.push({
+          nameWords: words,
+          targetWordIndex: targetIndex
+        });
+      }
+    }
+  }
+  
+  // Retornar la matriz de resultados
+  return result;
     
 }
 

@@ -1,5 +1,12 @@
 function addToFront(arr, element) {
   // your code here
+
+  if(!Array.isArray(arr)){
+    return []
+  }
+
+  arr.unshift(element)
+  return arr
   
 }
 

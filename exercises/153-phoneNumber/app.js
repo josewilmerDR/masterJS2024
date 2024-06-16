@@ -3,24 +3,29 @@ function PhoneNumberFormatter(numbers) {
 }
 
 PhoneNumberFormatter.prototype.render = function() {
-  let string = '';
-  // your code here
+  let areaCode = this.getAreaCode();
+  let exchangeCode = this.getExchangeCode();
+  let lineNumber = this.getLineNumber();
   
-  return string;
+  // Formatear el número en "(000) 000-0000"
+  return this.parenthesize(areaCode) + ' ' + exchangeCode + '-' + lineNumber;
 };
 
 PhoneNumberFormatter.prototype.getAreaCode = function() {
-  // your code here
+  /// Extraer los primeros 3 números
+  return this.slice(0, 3);
   
 };
 
 PhoneNumberFormatter.prototype.getExchangeCode = function() {
-  // your code here
+  //Entraer los siguientes tres numeros
+  return this.slice(3, 6);
   
 };
 
 PhoneNumberFormatter.prototype.getLineNumber = function() {
-  // your code here
+  //Entraer los siguientes cuatro numeros
+  return this.slice(6, 10);
   
 };
 

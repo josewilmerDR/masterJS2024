@@ -1,5 +1,13 @@
 function fromListToObject(array) {
   // your code here
+
+  let obj = {}
+
+  for (const [key, value] of array){
+    obj[key] =  value
+  }
+
+  return obj;
   
 }
 

@@ -17,10 +17,21 @@ let currentInventory = [
   }
 ];
 
-function renderInventory(inventory) {
-    // your code here
-    // hint: before you just dive into coding...
-    // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
+function renderInventory(currentInventory) {
+  // Crear una matriz vacía para almacenar el resultado
+  let result = [];
+  
+  // Iterar sobre cada diseñador en el inventario
+  for (let designer of currentInventory) {
+    // Iterar sobre cada zapato del diseñador
+    for (let shoe of designer.shoes) {
+      // Añadir un array con [nombre del diseñador, nombre del zapato, precio] a la matriz de resultados
+      result.push([designer.name, shoe.name, shoe.price]);
+    }
+  }
+  
+  // Retornar la matriz de resultados
+  return result;
     
 }
 

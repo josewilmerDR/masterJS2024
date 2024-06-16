@@ -1,5 +1,7 @@
 function computeProductOfAllElements(arr) {
   // your code here
+
+  return arr.reduce((acc, val) => acc * val)
   
 }
 

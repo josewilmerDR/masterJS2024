@@ -1,5 +1,11 @@
 function joinArrays(arr1, arr2) {
   // your code here
+  if(!Array.isArray(arr1) && !Array.isArray(arr2)){
+    return []
+  }
+
+  return arr1.concat(arr2)
+
   
 }
 

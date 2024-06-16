@@ -1,5 +1,13 @@
 function transformFirstAndLast(array) {
   // your code here
+
+  let firstItem = array[0]
+
+  let lastItem = arr[array.length-1]
+
+  return obj ={
+    firstItem:lastItem,
+  }
   
 }
 

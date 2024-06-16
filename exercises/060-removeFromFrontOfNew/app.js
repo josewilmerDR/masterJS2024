@@ -1,5 +1,11 @@
 function removeFromFrontOfNew(arr) {
     // your code here
+
+    if(!Array.isArray(arr)){
+        return []
+    }
+
+    return arr.slice(1)
     
 }
 

@@ -1,5 +1,10 @@
 function getElementsAfter(array, n) {
   // your code here
+  if(!Array.isArray(array)){
+    return []
+  }
+  return array.slice(n+1)
+  // return array
   
 }
 
